@@ -39,27 +39,27 @@ public class JellyLegsCommand extends Command {
             plugin.setJellyLegs(player, !plugin.hasJellyLegs(player));
 
             if (plugin.hasJellyLegs(player)) {
-                sender.sendMessage(TextFormat.RED + "You can now take fall damage");
+                sender.sendMessage(plugin.getMessage("fall-damage-disabled"));
             } else {
-                sender.sendMessage(TextFormat.GREEN + "You can no longer take fall damage");
+                sender.sendMessage(plugin.getMessage("fall-damage-enabled"));
             }
         }
         if (args.length == 1) {
             Player target = sender.getServer().getPlayer(args[0]);
 
             if (target == null) {
-                sender.sendMessage(TextFormat.RED + "Player not found");
+                sender.sendMessage(plugin.getMessage("player-not-found"));
                 return true;
             }
 
             plugin.setJellyLegs(target, !plugin.hasJellyLegs(target));
 
             if (plugin.hasJellyLegs(target)) {
-                sender.sendMessage(TextFormat.RED + "Player '" + target.getName() + "' can now take fall damage");
-                target.sendMessage(TextFormat.RED + "You can now take fall damage");
+                sender.sendMessage(plugin.getMessage("fall-damage-disabled-other").replace("{player}", target.getName()));
+                target.sendMessage(plugin.getMessage("fall-damage-disabled"));
             } else {
-                sender.sendMessage(TextFormat.GREEN + "Player '" + target.getName() + "' can no longer take fall damage");
-                target.sendMessage(TextFormat.GREEN + "You can no longer take fall damage");
+                sender.sendMessage(plugin.getMessage("fall-damage-enabled-other").replace("{player}", target.getName()));
+                target.sendMessage(plugin.getMessage("fall-damage-enabled"));
             }
         }
         return true;

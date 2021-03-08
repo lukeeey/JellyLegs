@@ -1,0 +1,18 @@
+# ==============================================
+#    JellyLegs by lukeeey
+#    https://github.com/lukeeey/JellyLegs
+# ==============================================
+
+messages:
+  fall-damage-enabled: "&cYou can now take fall damage"
+  fall-damage-disabled: "&aYou can no longer take fall damage"
+  fall-damage-enabled-other: "&cPlayer '{player}' can now take fall damage"
+  fall-damage-disabled-other: "&aPlayer '{player}' can no longer take fall damage"
+  player-not-found: "&cPlayer not found"
+  damage-taken: "&7You survived a fall that would have caused &4{damage} hearts&7 of damage!"
+
+# Whether or not to show a message telling the player the amount of damage they
+# WOULD have taken if they did not have JellyLegs.
+# -
+# The message displayed can be edited above.
+show-damage-taken-message: true

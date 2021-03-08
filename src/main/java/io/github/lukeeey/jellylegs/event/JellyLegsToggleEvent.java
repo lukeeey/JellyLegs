@@ -1,13 +1,14 @@
 package io.github.lukeeey.jellylegs.event;
 
 import cn.nukkit.Player;
+import cn.nukkit.event.Cancellable;
 import cn.nukkit.event.Event;
 import cn.nukkit.event.HandlerList;
 import lombok.Data;
 import lombok.Getter;
 
 @Data
-public class JellyLegsToggleEvent extends Event {
+public class JellyLegsToggleEvent extends Event implements Cancellable {
     @Getter
     private static final HandlerList handlers = new HandlerList();
 
