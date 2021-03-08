@@ -1,0 +1,17 @@
+name: JellyLegs
+author: lukeeey
+description: Don't take any fall damages with your JellyLegs!
+version: ${project.version}
+api: [1.0.5]
+main: io.github.lukeeey.jellylegs.JellyLegsPlugin
+website: https://github.com/lukeeey/JellyLegs
+permissions:
+  jellylegs.*:
+    description: Gives access to all JellyLegs permissions
+    children:
+      jellylegs.toggle:
+        default: true
+        description: Gives access to toggle JellyLegs
+      jellylegs.toggle.others:
+        default: op
+        description: Gives access to toggle other players JellyLegs
