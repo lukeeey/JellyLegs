@@ -11,7 +11,7 @@ public class JellyLegsCommand extends Command {
     private final JellyLegsPlugin plugin;
 
     public JellyLegsCommand(JellyLegsPlugin plugin) {
-        super("jellylegs", "Toggle fall damage", "/jellylegs", new String[]{"jelly"});
+        super("jellylegs", "Toggle fall damage", "/jellylegs [player]", new String[]{"jelly"});
         this.setPermission("jellylegs.toggle;jellylegs.toggle.others;jellylegs.*");
         this.plugin = plugin;
         this.commandParameters.put("default", new CommandParameter[]{

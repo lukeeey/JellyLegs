@@ -7,10 +7,11 @@ main: io.github.lukeeey.jellylegs.JellyLegsPlugin
 website: https://github.com/lukeeey/JellyLegs
 permissions:
   jellylegs.*:
+    default: false
     description: Gives access to all JellyLegs permissions
     children:
       jellylegs.toggle:
-        default: true
+        default: op
         description: Gives access to toggle JellyLegs
       jellylegs.toggle.others:
         default: op
